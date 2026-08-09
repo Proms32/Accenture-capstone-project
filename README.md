@@ -122,29 +122,6 @@ cloud-cost-optimization/
 └── README.md
 ```
 
-## ▶️ Getting Started
-
-### Clone the repository
-
-``` bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd cloud-cost-optimization
-```
-
-### Install dependencies
-
-``` bash
-pip install -r requirements.txt
-```
-
-### Run the dashboard
-
-``` bash
-streamlit run dashboard/dashboard.py
-```
-
-> Update the paths above if the final repository structure differs.
-
 ## 📚 Project Documentation
 
 Detailed analysis and presentation material can be maintained separately
