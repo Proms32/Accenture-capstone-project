@@ -13,14 +13,17 @@ import matplotlib
 matplotlib.use('Agg')  # Non-interactive backend
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+from pathlib import Path
 import seaborn as sns
 import os
 import warnings
 warnings.filterwarnings('ignore')
 
 # ── Configuration ──────────────────────────────────────────────
-OUTPUT_DIR = '/Users/yashchaudhary/Desktop/accenrueCapstone/charts'
-DATA_PATH = '/Users/yashchaudhary/Desktop/accenrueCapstone/cloud_budget_2023_clean.csv'
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+OUTPUT_DIR = BASE_DIR / "charts"
+DATA_PATH = BASE_DIR / "dataset" / "cloud_budget_2023_clean.csv"
 
 # Premium color palette
 COLORS = {
