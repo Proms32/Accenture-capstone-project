@@ -12,6 +12,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pathlib import Path
 
 # ── Page Config ────────────────────────────────────────────────
 st.set_page_config(
@@ -158,12 +159,14 @@ st.markdown("""
 
 
 # ── Data Loading ───────────────────────────────────────────────
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "dataset" / "cloud_budget_2023_clean.csv"
+
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/yashchaudhary/Desktop/accenrueCapstone/cloud_budget_2023_clean.csv')
+    df = pd.read_csv(DATA_PATH)
     df['date'] = pd.to_datetime(df['date'])
     return df
-
 
 df = load_data()
 
